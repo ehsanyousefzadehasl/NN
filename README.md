@@ -16,6 +16,6 @@ Bias is for shifting the activation function in a way that it may be impossible 
 ![bias3](img/bias3.gif)
 ![bias4](img/bias4.png)
 
-[Here], you can look at a very simple neuron.
+[Here](code/01-giving_idea/neuron.py), you can look at a very simple neuron.
 
 In the training process (in a supervised learning), the neuron has access the answer and its generated result. So, based on the difference between the answer and the produced result, it tries to update the weights.
