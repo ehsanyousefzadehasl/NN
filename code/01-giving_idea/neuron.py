@@ -13,7 +13,7 @@ class neuron:
         for i in range(num_of_inputs):
             self.weights[i] = (random.random() - 0.5) * 2
         self.bias = random.random()
-        print(self.weights)
+        # print(self.weights)
 
     def test(self, input_array):
         weighted_sum = 0
@@ -24,8 +24,8 @@ class neuron:
     def training(self, input_array, answer):
         tested_result = self.test(input_array)
         error = answer - tested_result
-
-        for i in range(len(input_array)):
-            self.weights[i] += error * input_array[i] * self.learning_rate
+        if error != 0:
+            for i in range(len(input_array)):
+                self.weights[i] += error * input_array[i] * self.learning_rate
 
         # print(self.weights)
