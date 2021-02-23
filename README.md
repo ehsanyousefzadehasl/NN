@@ -8,7 +8,7 @@ The very first step in this journey is to understand how a single neuron in our 
 ![structure of an artificial neuron](img/The-structure-of-an-artificial-neuron.png)
 
 But, what is the bias?
-Bias is for shifting the activation function in a way that it may be impossible just by changing the weights. Look at the following figures consecutively, you will catch it:
+Bias is for shifting the activation function in a way that it may be impossible just by changing the weights (when inputs are zero). Look at the following figures consecutively, you will catch it:
 
 ![bias1](img/bias1.gif)
 ![bias2](img/bias2.png)
@@ -18,4 +18,10 @@ Bias is for shifting the activation function in a way that it may be impossible 
 
 [Here](code/01-giving_idea/neuron.py), you can look at a very simple neuron.
 
-In the training process (in a supervised learning), the neuron has access the answer and its generated result. So, based on the difference between the answer and the produced result, it tries to update the weights.
+In the training process (in a supervised learning), the neuron has access the answer and its generated result. So, based on the difference between the answer and the produced result (called error), it tries to update the weights (w0 = w0 + delta(w0)). The process that changes the weights is called **gradient descent**.
+```
+delta(w) = error * input
+
+new weight = weight + error * input
+```
+
