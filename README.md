@@ -27,5 +27,22 @@ delta(w) = error * input
 new weight = weight + error * input
 ```
 ---
-Then, I came up with the idea of watching Machine Learning tutorial by Andrew Ng, which is available on YouTube. I will summarize what I learn in the simplest way with python coding here.
+# ML by Andrew Ng
+Then, I came up with the idea of watching Machine Learning tutorial by Andrew Ng, which is available on YouTube. I will summarize what I learn in the simplest way with doing exercises in octave and a try to implement them in python.
 
+[Arthur Samuel](https://en.wikipedia.org/wiki/Arthur_Samuel) (1959) defines ML as: "Field of study that gives computers the ability to learn without being explicitely programmed."
+
+[Tom Mitchel](https://en.wikipedia.org/wiki/Tom_M._Mitchell) (1998) defines a well-posed learning problem as: "a computer program is said to learn from experience E with respect to some task T and some performance measure P. If its performance on T, as measured by P, improves with experience E"
+
+(Example for Tom Mitch's definition) Supposing an email program learning from our labeling emails as spam:
+- (Task): Classifying emails as spam or not spam
+- (Experience): Observing our labels as spam or not
+- (Performance): The number of emails correctly classified
+
+ML learning algorithms:
+- Supervised Learning (Regression (continuous values like price prediction), Classification (discrete values like yes/no classification)) | Right answer is told to the machine
+- Unsupervised learning (Clustering, Google news, organizing computing clusters, social network analysis, market segmentation, astronomical data analysis, cocktail party algorithm)
+- Reinforcement Learning
+- Recommender Systems
+
+## Linear Regression
