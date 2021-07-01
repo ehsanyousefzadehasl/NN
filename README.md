@@ -45,4 +45,30 @@ ML learning algorithms:
 - Reinforcement Learning
 - Recommender Systems
 
-## Linear Regression
+---
+
+### Logistic Regression
+Logistic regression is an algorithm for binary classification.
+
+For stroing an image, computers store three matrices: Blue, Green, Red, corresponding to the color channels of the image. A feature vector is built by sequencing rows of these matrices. In the following figure, you can see how it occurs.
+
+![feature vector of an image](imge/../img/feature_vector_of_an_image.jpg)
+
+In a binary classification, the goal is to learn a classifier that can input an image represented by a feature vector, and predict whether the corresponding label is 1 or 0. The example can be a cat classifier which classifies cats from non-cats.
+
+A single training example is represented by a pair (x, y) where x is an n-dimensional feature vector, and y, the label, is either 0 or 1.
+
+Training sets comprise m training examples. In the following figure, the notation is shown.
+
+![NN Notation](img/notation_NN.jpg)
+
+The logistic regression can be found in the following figure. The activation function, sigmoid, is also descirbed.
+
+![logistic regression](img/logistic_regression.jpg)
+
+When logistic regression is implemented, the main job is to learn parameters **w** and **b** so that the desired probability function becomes a good estimate of the chance of y being equal to one.
+
+To train the parameters **w** and **b** of the logistic regression model, you need to define a **cost function**.
+
+![error function](img/error_function.jpg)
+
