@@ -72,3 +72,15 @@ To train the parameters **w** and **b** of the logistic regression model, you ne
 
 ![error function](img/error_function.jpg)
 
+The goal is to find **w** and **b** to minimize **J(w,b)**.
+### Gradient Descent
+In the following figure, the concept of gradient descent is described with one-variable function.
+
+![gradient descent](img/gradient_descent.jpg)
+
+Backpropagation can be figure out with the following figure.
+
+![backpropagation](img/backpropagation.jpg)
+
+The backpropagation of logistic regression:
+
