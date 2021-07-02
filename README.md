@@ -92,3 +92,39 @@ The derivative calculation of sigmoid function is provided in the following figu
 
 Now, we want to extend our formulas and equations to m training examples:
 
+![m examples of gradient descent](img/gradient_descent_on_m_examples.jpg)
+
+But, as it is apparent it is not efficient (because of so many iterantions on arrays). The technique which helps us here to improve the effictiveness of gradient descent is **vectorization**.
+
+![vectorization](img/vectorization_in_python_numpy.jpg)
+
+The following figure shows how vectorizarion using **numpy** in python can be more efficient. From [here](code/1-NN_DL_Basics_season/vectorization_in_python_with_numpy_lib.ipynb) you can have the source code.
+
+![vectorization in pytho with numpy](img/01-vectorization_in_numpy.jpg)
+
+The reason why numpy performs efficiently is that it uses CPU's SIMD units for its calculations.
+
+In neural networks programming, whenever possible, avoid explicit for loops. The following figure shows two examples.
+
+![two examples of vectorization](img/vectorization_examples_with_numpy.jpg)
+
+Other functions of numpy that perform a secific operation on all elements of a vector.
+
+- np.log(v)
+- np.abs(v)
+- np.max(v, 0)
+- v**2 : the result is a vector which each element of it is square of the corresponding element of v
+- 1/v
+
+The following slide shows how we get rid of one of the for loops in logistic regression.
+
+![vertorization of logistic regression](img/vectorized_logisitic_regression.jpg)
+
+It can be further vectorized as follows:
+
+![vectorization of logistic regression](img/vectorization_of_logistic_regression.jpg)
+
+![vectorization of logistic regression](img/vectorized_logisitic_regression_2.jpg)
+
+![vectorization of logistic regression](img/vectorized_logisitic_regression_3.jpg)
+
