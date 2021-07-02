@@ -82,5 +82,13 @@ Backpropagation can be figure out with the following figure.
 
 ![backpropagation](img/backpropagation.jpg)
 
-The backpropagation of logistic regression:
+The backpropagation of logistic regression on its computation graph.
+
+![computation graph of logistic regression](img/logistic_regression_computation_graph.jpg)
+
+The derivative calculation of sigmoid function is provided in the following figure.
+
+![derivative of sigmoid function](img/derivative_of_sigmoid_function.jpg)
+
+Now, we want to extend our formulas and equations to m training examples:
 
