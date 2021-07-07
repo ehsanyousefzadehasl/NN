@@ -72,6 +72,15 @@ To train the parameters **w** and **b** of the logistic regression model, you ne
 
 ![error function](img/error_function.jpg)
 
+#### Justification of logistic regression cost function
+
+![cost function justification one example](img/cost_function_justification1.jpg)
+
+
+##### Justification of logistic regression cost function for m training examples
+
+![cost function justification m training examples](img/cost_function_justification2.jpg)
+
 The goal is to find **w** and **b** to minimize **J(w,b)**.
 ### Gradient Descent
 In the following figure, the concept of gradient descent is described with one-variable function.
@@ -128,3 +137,58 @@ It can be further vectorized as follows:
 
 ![vectorization of logistic regression](img/vectorized_logisitic_regression_3.jpg)
 
+### Vectorization in Python
+
+Assume we have a 3x4 matrix:
+
+```python
+import numpy as np
+
+A = np.array([[12 13 14 15],
+              [16 17 18 19],
+              [21 22 23 24]])
+
+print(A)
+```
+
+to sum vertically:
+
+```python
+
+cal = A.sum(axis = 0) # axis = 0 means summing vertically
+
+# to sum horizontally we should have axis = 1
+
+print(cal)
+```
+
+To calculate the percentage of each element to the sum of each column:
+
+```python
+percentage = 100 * A / cal.reshape(1, 4)
+
+print(percentage)
+```
+
+There was no need for reshape function to be called. Python auto expands (extends) a scalar value to an appropriate matrix (vector) when it is needed. It was called just for clarification. However, this function is of constant time complexity. In the following figure, it is obvious how python extends matrices to do calculations:
+
+![python broadcating](img/python_broadcating.jpg)
+
+Two importants to pay attention when programming with python for Neural Networks:
+
+1. Stop using rank 1 arrays and use column or row vectors:
+
+```python
+
+a = np.random.randn(5) # NEVER USE IT
+
+a = np.random.randn(5, 1) # 5x1 Column Vector
+
+a = np.random.randn(1, 5) # 1x5 Row Vector
+
+```
+
+2. Feel free to toss a lot of assert statements to double check the dimensions of your matrices and arrays.
+
+
+3. Use reshape function to make sure that your matrices or your vectors are from the dimensions that you need to be.
